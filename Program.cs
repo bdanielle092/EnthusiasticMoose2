@@ -11,13 +11,14 @@ namespace EnthusiasticMoose2
     Console.WriteLine();
 
     // Let the moose speak!
-    MooseSays();
+     MooseSays("H I, I'M  E N T H U S I A S T I C !");
+    MooseSays("I really am enthusiastic");
 }
 
-        static void MooseSays()
-        {
-            Console.WriteLine(@"
-                                       _.--^^^--,
+       static void MooseSays(string message)
+{
+    Console.WriteLine($@"
+                                      _.--^^^--,
                                     .'          `\
   .-^^^^^^-.                      .'              |
  /          '.                   /            .-._/
@@ -33,7 +34,7 @@ namespace EnthusiasticMoose2
                '-'    | /       \ |
                       |  .-. .-.  |
                       \ / o| |o \ /
-                       |   / \   |    H I, I'M  E N T H U S I A S T I C !
+                       |   / \   |    {message}
                       / `^`   `^` \
                      /             \
                     | '._.'         \
@@ -43,7 +44,7 @@ namespace EnthusiasticMoose2
                       /|\  (_\  /_) /
                       \ \'._  ` '_.'
                        `^^` `^^^`
-            ");
-        }
+    ");
+}
     }
 }
