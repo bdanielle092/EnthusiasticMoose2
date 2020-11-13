@@ -15,64 +15,27 @@ namespace EnthusiasticMoose2
     MooseSays("I really am enthusiastic");
 
     // As a question
-    CanadaQuestion();
-    EnthusiasticQuestion();
-    LoveCSharpQuestion();
-    SecretQuestion();
+   Question("Is Canada real? Really?", "It seems very unlikely.", "I  K N E W  I T !!!");
+   Question("Are you enthusiastic?", "Yay!", "You should try it!");
+   Question("Do you love C# yet?", "Good job sucking up to your instructor!","You will...oh, yes, you will...");
+   Question("Do you want to know a secret?","ME TOO!!!! I love secrets...tell me one!","Oh, no...secrets are the best, I love to share them!");
 }
 
-static void CanadaQuestion()
-{
-    bool isTrue = MooseAsks("Is Canada real?");
-    if (isTrue)
-    {
-        MooseSays("Really? It seems very unlikely.");
-    }
-    else
-    {
-        MooseSays("I  K N E W  I T !!!");
-    }
-}
 
-static void EnthusiasticQuestion()
-{
-    bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
-    if (isEnthusiastic)
-    {
-        MooseSays("Yay!");
-    }
-    else
-    {
-        MooseSays("You should try it!");
-    }
-}
-
-static void LoveCSharpQuestion()
-{
-    bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
-    if (doesLoveCSharp)
-    {
-        MooseSays("Good job sucking up to your instructor!");
-    }
-    else
-    {
-        MooseSays("You will...oh, yes, you will...");
-    }
-}
-
-static void SecretQuestion()
-{
-    bool isEverythingFine = MooseAsks("Do you want to know a secret?");
-    if (isEverythingFine)
-    {
-        MooseSays("ME TOO!!!! I love secrets...tell me one!");
-    }
-    else
-    {
-        MooseSays("Oh, no...secrets are the best, I love to share them!");
-    }
-}
-
+ static void Question(string question, string yes, string no)
+        {
+            bool isTrue = MooseAsks(question);
+            if (isTrue)
+            {
+                Console.Clear();
+                MooseSays(yes);
+            }
+            else
+            {
+                Console.Clear();
+                MooseSays(no);
+            }
+        }
 static bool MooseAsks(string question)
 {
     Console.Write($"{question} (Y/N): ");
